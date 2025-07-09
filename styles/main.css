@@ -1,0 +1,15 @@
+.grid{
+    width: 600px;
+    height: 600px;
+    border: 1px solid orange;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: pink;
+}
+
+.grid div {
+    width: 58px;
+    height: 58px;
+    border: 1px solid orange;
+    background-color: pink;
+}
