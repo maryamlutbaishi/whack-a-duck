@@ -25,19 +25,25 @@ function init(){
         totalDucks=0
         
     }
+    function placeDuck(){
+         removeDuck()
+            duckPosition=Math.floor(Math.random()*numberOfCells)
+            addDuck()
+    }
     function play(){
         setInterval(()=>{
             if(totalDucks<10){
-            removeDuck()
-            duckPosition=Math.floor(Math.random()*numberOfCells)
-            addDuck()
+            // removeDuck()
+            // duckPosition=Math.floor(Math.random()*numberOfCells)
+            // addDuck()
+            placeDuck()
             }else{
                 endGame()
                 
             }
             
             
-        },3000)
+        },4000)
     }
     function handeleClick(event){
         console.log('Handel Click has run!')
@@ -47,7 +53,11 @@ function init(){
             score += 10
             scoreElem.textContent=`Your Score is ${score}`
             audioElm.play()
+            placeDuck()
             console.log(score)
+        }
+        if(score>=100){
+            endGame()
         }
     }
     function createGrid(){
