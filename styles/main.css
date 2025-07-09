@@ -12,4 +12,10 @@
     height: 58px;
     border: 1px solid orange;
     background-color: pink;
+    color: rgb(255, 98, 0);
+}
+.duck{
+    background-image: url('../assets/White-Duck-PNG-Download-Image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
